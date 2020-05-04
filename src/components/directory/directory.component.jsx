@@ -4,8 +4,8 @@ import MenuItem from "../menu-item/menu-item.component";
 import "./directory.styles.scss";
 
 function Directory() {
-   const menuItem = sections.map(({ title, imageUrl, id, linkUrl, size }) => (
-      <MenuItem key={id} title={title} imageUrl={imageUrl} linkUrl={linkUrl} size={size} />
+   const menuItem = sections.map(({ id, ...otherSectionProps }) => (
+      <MenuItem key={id} {...otherSectionProps} />
    ));
 
    return <div className="directory-menu">{menuItem}</div>;
