@@ -1,0 +1,52 @@
+import React, { useState } from "react";
+import FormInput from "../form-input/form-input.component";
+import CustomButton from "../custom-button/custom-button.component";
+
+import "./sign-in.styles.scss";
+
+const SignIn = () => {
+   const [inputData, setInputData] = useState({ email: "", password: "" });
+
+   const handleSubmit = e => {
+      e.preventDefault();
+      setInputData({ email: "", password: "" });
+   };
+
+   const handleChange = e => {
+      const { name, value } = e.target;
+      setInputData(prevInputData => {
+         return {
+            ...prevInputData,
+            [name]: value
+         };
+      });
+   };
+
+   return (
+      <div className="sign-in">
+         <h2>I already have an account</h2>
+         <span>Sign in with your email and password</span>
+         <form onSubmit={handleSubmit}>
+            <FormInput
+               name="email"
+               type="email"
+               value={inputData.email}
+               handleChange={handleChange}
+               label="email"
+               required
+            />
+            <FormInput
+               name="password"
+               type="password"
+               value={inputData.password}
+               handleChange={handleChange}
+               label="password"
+               required
+            />
+            <CustomButton type="submit">Sign in</CustomButton>
+         </form>
+      </div>
+   );
+};
+
+export default SignIn;
