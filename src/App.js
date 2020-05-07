@@ -20,7 +20,7 @@ function App() {
                setCurrentUser({ id: snapShot.id, ...snapShot.data() });
             });
          } else {
-            setCurrentUser({ userAuth });
+            setCurrentUser(userAuth);
          }
       });
       return () => unsubscribeFromAuth();
