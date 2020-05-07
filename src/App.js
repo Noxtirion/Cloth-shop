@@ -11,8 +11,6 @@ import "./App.css";
 function App() {
    const [currentUser, setCurrentUser] = useState(null);
 
-   console.log(currentUser);
-
    useEffect(() => {
       const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
          if (userAuth) {
