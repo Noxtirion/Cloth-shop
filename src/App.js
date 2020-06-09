@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
 import HomePage from "./pages/homepage/homepage.component";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.actions";
 
 import "./App.css";
 
 function App() {
+   const currentUser = useSelector(state => state.user.currentUser);
    const dispatch = useDispatch();
 
    useEffect(() => {
@@ -39,7 +40,7 @@ function App() {
                <ShopPage />
             </Route>
             <Route path="/signin">
-               <SignInAndSignUpPage />
+               {currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />}
             </Route>
          </Switch>
       </div>
