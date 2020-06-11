@@ -11,7 +11,7 @@ import "./cart-icon.styles.scss";
 
 const CartIcon = () => {
    const dispatch = useDispatch();
-   const itemCount = selectCartItemsCount(useSelector(state => state));
+   const itemCount = useSelector(selectCartItemsCount);
 
    return (
       <div className="cart-icon" onClick={() => dispatch(toggleCartHidden())}>
