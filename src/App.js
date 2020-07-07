@@ -20,6 +20,7 @@ import "./App.css";
 
 function App() {
    const currentUser = useSelector(selectCurrentUser);
+
    const dispatch = useDispatch();
 
    useEffect(() => {
