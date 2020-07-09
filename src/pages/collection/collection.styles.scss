@@ -1,6 +1,11 @@
 .collection-page {
    display: flex;
    flex-direction: column;
+   align-items: center;
+
+   @media (min-width: 900px) {
+      align-items: stretch;
+   }
 
    .title {
       font-size: 38px;
@@ -9,11 +14,19 @@
 
    .items {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
       grid-gap: 10px;
 
       & .collection-item {
          margin-bottom: 30px;
+      }
+
+      @media (min-width: 500px) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @media (min-width: 900px) {
+         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
    }
 }

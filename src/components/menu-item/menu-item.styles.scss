@@ -9,8 +9,10 @@
    margin: 0 7.5px 15px;
    overflow: hidden;
 
-   &.large {
-      height: 380px;
+   @media (min-width: 500px) {
+      &.large {
+         height: 380px;
+      }
    }
 
    &:hover {

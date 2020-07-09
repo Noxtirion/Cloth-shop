@@ -3,4 +3,9 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
+   flex-direction: column;
+
+   @media (min-width: 500px) {
+      flex-direction: row;
+   }
 }

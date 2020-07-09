@@ -3,13 +3,25 @@
    display: flex;
    min-height: 100px;
    border-bottom: 1px solid darkgrey;
+   border-top: 1px solid darkgrey;
    padding: 15px 0;
    font-size: 20px;
-   align-items: center;
+   align-items: flex-start;
+   flex-direction: column;
+
+   @media (min-width: 1050px) {
+      border-top: none;
+      flex-direction: row;
+      align-items: center;
+   }
 
    .image-container {
-      width: 23%;
+      width: 50%;
       padding-right: 15px;
+
+      @media (min-width: 1050px) {
+         width: 23%;
+      }
 
       img {
          width: 100%;
@@ -19,7 +31,13 @@
    .name,
    .quantity,
    .price {
-      width: 23%;
+      width: 50%;
+      margin: 10px 10px 10px 0;
+
+      @media (min-width: 1050px) {
+         width: 23%;
+         margin: 0;
+      }
    }
 
    .quantity {
@@ -35,7 +53,14 @@
    }
 
    .remove-button {
+      align-self: flex-end;
       padding-left: 12px;
       cursor: pointer;
+      margin-right: 10px;
+
+      @media (min-width: 1050px) {
+         align-self: center;
+         margin: 0;
+      }
    }
 }

@@ -1,7 +1,16 @@
 .sign-in {
-   width: 380px;
+   width: 220px;
    display: flex;
    flex-direction: column;
+   margin-bottom: 5rem;
+
+   @media (min-width: 500px) {
+      width: 380px;
+   }
+
+   @media (min-width: 900px) {
+      margin-bottom: 0;
+   }
 
    .title {
       margin: 10px 0;
@@ -10,5 +19,26 @@
    .buttons {
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+
+      button:first-child {
+         margin-bottom: 10px;
+      }
+
+      .custom-button {
+         margin: 0;
+
+         @media (min-width: 500px) {
+            margin-right: 10rem;
+         }
+
+         @media (min-width: 900px) {
+            margin: 0;
+         }
+      }
+
+      @media (min-width: 900px) {
+         flex-direction: row;
+      }
    }
 }

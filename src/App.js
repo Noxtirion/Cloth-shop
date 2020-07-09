@@ -16,7 +16,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
    const currentUser = useSelector(selectCurrentUser);
