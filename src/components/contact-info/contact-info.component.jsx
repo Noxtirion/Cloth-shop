@@ -3,9 +3,9 @@ import React from "react";
 import { ReactComponent as Address } from "../../assets/address.svg";
 import { ReactComponent as Phone } from "../../assets/phone.svg";
 import { ReactComponent as Mail } from "../../assets/mail.svg";
-import { ReactComponent as Facebook } from "../../assets/facebook.svg";
-import { ReactComponent as LinkedIn } from "../../assets/linkedin.svg";
-import { ReactComponent as Twitter } from "../../assets/twitter.svg";
+import { ReactComponent as Facebook } from "../../assets/facebook-line.svg";
+import { ReactComponent as LinkedIn } from "../../assets/linkedin-line.svg";
+import { ReactComponent as Twitter } from "../../assets/twitter-line.svg";
 
 import "./contact-info.styles.scss";
 
