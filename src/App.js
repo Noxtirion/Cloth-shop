@@ -4,6 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
+import Contact from "./pages/contact/contact.component.jsx";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route path="/shop">
                <ShopPage />
+            </Route>
+            <Route path="/contact">
+               <Contact />
             </Route>
             <Route path="/checkout">
                <CheckoutPage />
